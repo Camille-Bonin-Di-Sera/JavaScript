@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <h1>Exercice 0</h1>
+
+        <script type="text/javascript">
+
+        /* Section 1 */   
+
+        /*  Déclaration de plusieurs Variables */
+        var name = "Joe";
+        var city = 'London';
+        var age = 32;
+        var isRed = true;
+        var isOld = age > 80;
+
+        /* Déclaration d'un tableau*/
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
+
+
+        /* Création d'une Fonction info visant à regarder la tailler et la masse */
+        function info(height, weight) {
+            if (height > 180) {
+                console.log('Vous êtes grand');/*Si ma taille est superieur à 180 alors afficher "..."*/
+            }
+            if (weight < 0) {
+                console.log('oups, there is a problem');/*Si ma masse est inferieur à 0 alors afficher "..."*/
+            } else if ( weight < 15) {
+                console.log('Are you that slim ?') /*Sinon si ma masse est inferieur à 1r alors afficher "..."*/
+            } else {
+                console.log('Good !') /*Sinon afficher "..."*/
+            }
+        }
+
+        info(165, 45); /* Appel de la fonction avec en parametre 165 pour la taille et 45 Pour la masse */
+
+        var myHeight = 175; /*Déclaration de  de la varibla taille */
+        var myWeight = 86; /*Déclaration de  de la varibla masse */
+
+        info(myHeight, myWeight); /*Ont change les parametre de la fonction pour mettre nos viariable */
+
+        info(myHeight + 15, myWeight - 100); /*Ont ajoute + 15 a la taille et -100 à la masse*/
+
+        function toUpper(variable) {
+            return variable.toUpperCase(); /* */
+        }
+
+        var upperName = toUpper(name);
+
+        for (i = 0; i < 3; i = i + 1) {
+            console.log(previousJobs[i]); /* La boucle for sert à pracourir un tableau don la valeur cherché est inferieur à 3*/ 
+        }
+
+        /* Section 2: */
+
+        // afficher la ville dans laquele Joe vit.     
+
+        // afficher si Joe est roux ou pas.
+
+        /* Section 3 */
+
+        console.log(myVariable);
+
+        </script>
+
+    </body>
+</html>
