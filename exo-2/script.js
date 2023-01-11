@@ -16,22 +16,26 @@ let hour = myDate.getUTCHours();
 let today = myDate.getUTCDay();
 
 // Tester si c'est un jour de semaine ou de weekend
-if (today == 1 && hour < 9) {
-    console.log(weekend);
-} else if (today == 5 && hour >= 17) {
-    console.log(weekend);
-} else if (today >= 1 && today <= 5) {
-    console.log(weekday);
+if (day == 1 && hour < 9) {
+    console.log(weekendMessage);
+} else if (day == 5 && hour >= 17) {
+    console.log(weekendMessage);
+} else if (day >= 1 && day <= 5) {
+    console.log(weekdayMessage);
 } else {
-    console.log(weekend);
+    console.log(weekendMessage);
 }
+
+const isTesting = true;
 
 
 
 
 //console.log(today, WeekDay);
 
-/* const myDate = new Date();
+/* Il y à plusieurs façon de le faire voici aussi la façon d'un camarade :
+
+const myDate = new Date();
 let semaine = "Semaine";
 let weekend = "Weekend";
 let jour;
