@@ -10,13 +10,13 @@ var secretMessage = ["Learning", "isn't", "about", "what", "you", "get", "easily
 //let RemoveFirst = secretMessage.shift();
 //let aadFirst = secretMessage.unshift("Programming");
 //secretMessage.splice(remove, 1, item);
-secretMessage = secretMessage.map(function(word) {
+/* secretMessage = secretMessage.map(function(word) {
     if (word === "get" || word === "right" || word === "the" || word === "first" || word === "time") {
         return "know";
     } else {
         return word;
     }
 });
-console.log(secretMessage);
+console.log(secretMessage);*/
 
-console.log('secretMessage', secretMessage);
+console.log(secretMessage.join(" "));
