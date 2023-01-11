@@ -1,5 +1,8 @@
 let playerChoice = prompt("Choisissez pierre, feuille ou ciseau").toLowerCase();
-//Création des choix de l'utilisateur
+
+
+////Utilise une instruction switch pour imprimer le choix de l'utilisateur dans la console
+let result;
 switch (playerChoice) {
   case "pierre":
     console.log("Vous avez choisi pierre!");
@@ -29,8 +32,7 @@ if (computerChoice < 0.34) {
 
 console.log("L'ordinateur a choisi: " + computerChoice);
 
-//Affichage et calcul du resultat
-let result;
+//Déterminer le résultat du jeu à l’aide d’une instruction switch et d’opérateurs ternaires
 switch (playerChoice) {
   case "pierre":
     result = computerChoice === "ciseau" ? "Vous avez gagné!" : "Vous avez perdu!";
