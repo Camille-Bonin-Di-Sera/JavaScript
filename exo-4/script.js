@@ -7,7 +7,7 @@ var secretMessage = ["Learning", "isn't", "about", "what", "you", "get", "easily
 //let newObject = secretMessage.push('to', 'program');
 //let remove = 6;
 //let item = "right";
-let RemoveFirst = secretMessage.shift();
-
+//let RemoveFirst = secretMessage.shift();
+let aadFirst = secretMessage.unshift("Programming");
 //secretMessage.splice(remove, 1, item);
 console.log('secretMessage', secretMessage);
