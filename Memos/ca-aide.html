@@ -1,0 +1,26 @@
+En JavaScript, la méthode Date() est utilisée pour créer un objet de date qui contient des informations sur la date et l'heure courante. Il peut être utilisé avec ou sans arguments. Si aucun argument n'est fourni, l'objet Date créé contiendra la date et l'heure actuelles. Sinon, les arguments peuvent être utilisés pour spécifier la date et l'heure souhaitées.
+
+Voici quelques exemples d'utilisation de la méthode Date() :
+<script>
+
+   // Créer un objet date pour la date et l'heure actuelles
+let today1 = new Date();
+console.log(today1); // affiche quelque chose comme "Mon Aug 10 2020 17:13:00 GMT-0700 (Pacific Daylight Time)"
+
+// Créer un objet date pour une date spécifique
+let birthday = new Date("January 15, 1985 11:20:00");
+console.log(birthday); // affiche "Fri Jan 15 1985 11:20:00 GMT-0800 (Pacific Standard Time)" 
+</script>
+
+Il existe plusieurs méthodes pour obtenir les différentes informations sur une date, comme les heures, minutes, jours, mois, années :
+
+
+<script>
+let today = new Date();
+console.log(today.getFullYear());  // Affiche l'année en cours
+console.log(today.getMonth());  // Affiche le mois en cours (de 0 à 11)
+console.log(today.getDate());  // Affiche le jour en cours (de 1 à 31)
+console.log(today.getHours());  // Affiche les heures en cours (de 0 à 23)
+console.log(today.getMinutes());  // Affiche les minutes en cours (de 0 à 59)
+console.log(today.getSeconds());  // Affiche les secondes en cours (de 0 à 59)
+</script>
