@@ -24,3 +24,70 @@ console.log(today.getHours());  // Affiche les heures en cours (de 0 à 23)
 console.log(today.getMinutes());  // Affiche les minutes en cours (de 0 à 59)
 console.log(today.getSeconds());  // Affiche les secondes en cours (de 0 à 59)
 </script>
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+<h1>Explication exo6</h1>
+
+<script>
+
+let team = {
+        players: [{
+            firstName: "Pablo",
+            lastName: "Sanchez",
+            age: 11
+        }],
+        games: [{
+            opponent: "Broncos",
+            teamPoints: 42,
+            opponentPoints: 27
+        }],
+        addPlayer: function(firstName, lastName, age){
+            this.players.push({
+                firstName: firstName,
+                lastName: lastName,
+                age: age
+            });
+        },
+        addGame: function (opponent, teamPoints, opponentPoints) {
+            this.games.push({
+                opponent: opponent,
+                teamPoints: parseInt(teamPoints),
+                opponentPoints: parseInt(opponentPoints)
+            });
+        }
+    }
+
+team.addPlayer("John", "Smith", 25);
+team.addPlayer("Jane", "Doe", 20);
+team.addGame("Broncos", 42, 27);
+team.addGame("Patriots", 21, 35);
+
+const totalTeamPoints = team.games.reduce((acc, game) => acc + game.teamPoints, 0);
+console.log(`Total team points: ${totalTeamPoints}`);
+
+const averageOpponentPoints = team.games.reduce((acc, game) => acc + game.opponentPoints, 0) / team.games.length;
+console.log(`Average opponent points: ${averageOpponentPoints}`);
+
+const oldestPlayer = team.players.sort((a, b) => b.age - a.age)[0];
+console.log(`Oldest player: ${oldestPlayer.firstName} ${oldestPlayer.lastName}, ${oldestPlayer.age} years old`);
+
+const sortedPlayers = team.players.sort((a, b) => a.lastName.localeCompare(b.lastName));
+console.log(`Sorted players: ${sortedPlayers.map(p => p.lastName)}`);
+
+</script>
+<p>
+   Ce code crée un objet "team" qui contient des propriétés "players" et "games" qui sont des tableaux d'objets. Ces objets décrivent les joueurs et les jeux de l'équipe. Il y a également des fonctions "addPlayer" et "addGame" qui permettent d'ajouter des joueurs et des jeux à l'équipe.
+
+   Ensuite, le code utilise ces fonctions pour ajouter deux joueurs (John Smith et Jane Doe) et deux jeux (contre les Broncos et les Patriots) à l'équipe.
+   
+   Puis, il utilise la méthode reduce pour calculer le total des points de l'équipe en parcourant tous les jeux de l'équipe et en ajoutant les points de chaque jeu à un accumulateur. Il affiche le résultat sur la console.
+   
+   Il utilise également la méthode reduce pour calculer la moyenne des points des adversaires en parcourant tous les jeux de l'équipe et en ajoutant les points de chaque adversaire à un accumulateur, puis en divisant le résultat par le nombre de jeux. Il affiche le résultat sur la console.
+   
+   Il utilise également la méthode sort pour trouver le joueur le plus âgé en triant les joueurs par ordre décroissant d'âge, puis en sélectionnant le premier élément du tableau trié. Il affiche le nom et l'âge du joueur le plus âgé sur la console.
+   
+   Enfin, il utilise la méthode sort pour trier les joueurs par ordre alphabétique de leur nom de famille. Il utilise map pour créer un tableau contenant les noms de famille des joueurs triés, et affiche le résultat sur la console.</p>
